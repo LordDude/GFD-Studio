@@ -528,43 +528,62 @@ namespace GFDLibrary.Materials
                     MaterialAttribute.Write( writer, attribute );
             }
         }
+        public static Material ConvertToMaterialPreset( Material material, ModelPackConverterOptions options )
+        {
+            Material newMaterial = null;
+
+            var materialName = material.Name;
+            var diffuseTexture = material.DiffuseMap;
+            var shadowTexture = material.ShadowMap;
+            if ( shadowTexture == null )
+                shadowTexture = material.DiffuseMap;
+            var specularTexture = material.SpecularMap;
+            if ( specularTexture == null )
+                specularTexture = material.DiffuseMap;
+            if ( diffuseTexture == null ) newMaterial = material;
+            else newMaterial = MaterialFactory.CreateMaterial( materialName, diffuseTexture.Name, options );
+            return newMaterial;
+        }
     }
+
+
+
 
     [Flags]
     public enum MaterialFlags : uint
     {
-        Bit0            = 1 << 00,
-        Bit1            = 1 << 01,
-        Bit2            = 1 << 02,
-        Bit3            = 1 << 03,
+        Bit0 = 1 << 00,
+        Bit1 = 1 << 01,
+        Bit2 = 1 << 02,
+        Bit3 = 1 << 03,
         EnableVertColors = 1 << 04,
-        Bit5           = 1 << 05,
-        Bit6           = 1 << 06,
-        EnableLight      = 1 << 07,
-        Bit8          = 1 << 08,
-        Bit9          = 1 << 09,
-        Bit10          = 1 << 10,
-        EnableLight2     = 1 << 11,
-        PurpleWireframe  = 1 << 12,
-        Bit13         = 1 << 13,
-        ReceiveShadow    = 1 << 14,
-        CastShadow       = 1 << 15,
-        HasAttributes    = 1 << 16,
-        Bit17   = 1 << 17,
-        Bit18   = 1 << 18,
-        DisableBloom     = 1 << 19,
-        HasDiffuseMap    = 1 << 20,
-        HasNormalMap     = 1 << 21,
-        HasSpecularMap   = 1 << 22,
+        OpaqueAlpha1 = 1 << 05,
+        Bit6 = 1 << 06,
+        EnableLight = 1 << 07,
+        Bit8 = 1 << 08,
+        Bit9 = 1 << 09,
+        Bit10 = 1 << 10,
+        EnableLight2 = 1 << 11,
+        PurpleWireframe = 1 << 12,
+        OpaqueAlpha2 = 1 << 13,
+        ReceiveShadow = 1 << 14,
+        CastShadow = 1 << 15,
+        HasAttributes = 1 << 16,
+        HasOutline = 1 << 17,
+        Bit18 = 1 << 18,
+        DisableBloom = 1 << 19,
+        HasDiffuseMap = 1 << 20,
+        HasNormalMap = 1 << 21,
+        HasSpecularMap = 1 << 22,
         HasReflectionMap = 1 << 23,
-        HasHighlightMap  = 1 << 24,
-        HasGlowMap       = 1 << 25,
-        HasNightMap      = 1 << 26,
-        HasDetailMap     = 1 << 27,
-        HasShadowMap     = 1 << 28,
-        Bit29= 1 << 29,
-        Bit30     = 1 << 30,
-        Bit31     = 1u << 31
+        HasHighlightMap = 1 << 24,
+        HasGlowMap = 1 << 25,
+        HasNightMap = 1 << 26,
+        HasDetailMap = 1 << 27,
+        HasShadowMap = 1 << 28,
+        Bit29 = 1 << 29,
+        Bit30 = 1 << 30,
+        Bit31 = 1u << 31
     }
 
     public enum MaterialDrawMethod
