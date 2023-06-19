@@ -571,5 +571,8 @@ namespace GFDLibrary.Materials
     {
         Opaque,
         Translucent,
+        Additive,
+        Unknown,
+        Multiply,
     }
 }

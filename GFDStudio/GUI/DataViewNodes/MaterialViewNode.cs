@@ -34,14 +34,14 @@ namespace GFDStudio.GUI.DataViewNodes
             set => SetDataProperty( value );
         }
         [TypeConverter( typeof( Vector4TypeConverter ) )]
-        [DisplayName("Ambient color (float)")]
+        [DisplayName( "matAmbient (float)" )]
         public Vector4 AmbientColor
         {
             get => Data.AmbientColor;
             set => SetDataProperty( value );
         }
 
-        [DisplayName( "Ambient color (RGBA)" )]
+        [DisplayName( "matAmbient (RGBA)" )]
         public System.Drawing.Color AmbientColorRGBA
         {
             get => Data.AmbientColor.ToByte();
@@ -49,14 +49,14 @@ namespace GFDStudio.GUI.DataViewNodes
         }
 
         [TypeConverter( typeof( Vector4TypeConverter ) )]
-        [DisplayName( "Diffuse color (float)" )]
+        [DisplayName( "matDiffuse (float)" )]
         public Vector4 DiffuseColor
         {
             get => Data.DiffuseColor;
             set => SetDataProperty( value );
         }
 
-        [DisplayName( "Diffuse color (RGBA)" )]
+        [DisplayName( "matDiffuse (RGBA)" )]
         public System.Drawing.Color DiffuseColorRGBA
         {
             get => Data.DiffuseColor.ToByte();
@@ -64,14 +64,14 @@ namespace GFDStudio.GUI.DataViewNodes
         }
 
         [TypeConverter( typeof( Vector4TypeConverter ) )]
-        [DisplayName( "Specular color (float)" )]
+        [DisplayName( "matEmissive (float)" )]
         public Vector4 SpecularColor
         {
             get => Data.SpecularColor;
             set => SetDataProperty( value );
         }
 
-        [DisplayName( "Specular color (RGBA)" )]
+        [DisplayName( "matEmissive (RGBA)" )]
         public System.Drawing.Color SpecularColorRGBA
         {
             get => Data.SpecularColor.ToByte();
@@ -80,14 +80,14 @@ namespace GFDStudio.GUI.DataViewNodes
 
         [Browsable( true )]
         [TypeConverter( typeof( Vector4ColorTypeConverter ) )]
-        [DisplayName( "Emissive color (float)" )]
+        [DisplayName( "matSpecular (float)" )]
         public Vector4 EmissiveColor
         {
             get => GetDataProperty<Vector4>();
             set => SetDataProperty( value );
         }
 
-        [DisplayName( "Emissive color (RGBA)" )]
+        [DisplayName( "matSpecular (RGBA)" )]
         public System.Drawing.Color EmissiveColorRGBA
         {
             get => Data.EmissiveColor.ToByte();
@@ -95,7 +95,7 @@ namespace GFDStudio.GUI.DataViewNodes
         }
 
         [Browsable( true )]
-        [DisplayName( "Reflectivity" )]
+        [DisplayName( "matReflectivity" )]
         public float Field40
         {
             get => GetDataProperty<float>();
@@ -103,7 +103,7 @@ namespace GFDStudio.GUI.DataViewNodes
         }
 
         [Browsable( true )]
-        [DisplayName( "Outline index" )]
+        [DisplayName( "matOutlineIndex" )]
         public float Field44
         {
             get => GetDataProperty<float>();

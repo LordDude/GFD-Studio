@@ -18,14 +18,14 @@ namespace GFDStudio.GUI.DataViewNodes
         // 0C
         [Browsable(true)]
         [TypeConverter(typeof(Vector4TypeConverter))]
-        [DisplayName("Color (float)")]
+        [DisplayName( "toonLightColor" )]
         public Vector4 Color
         {
             get => GetDataProperty< Vector4 >();
             set => SetDataProperty( value );
         }
 
-        [DisplayName( "Color (RGBA)" )]
+        [DisplayName( "toonLightColor (RGBA)" )]
         public System.Drawing.Color ColorRGBA
         {
             get => Data.Color.ToByte();
@@ -34,7 +34,7 @@ namespace GFDStudio.GUI.DataViewNodes
 
         // 1C
         [ Browsable( true ) ]
-        [DisplayName( "Light threshold" )]
+        [DisplayName( "toonLightThreshold" )]
         public float Field1C
         {
             get => GetDataProperty< float >();
@@ -43,7 +43,7 @@ namespace GFDStudio.GUI.DataViewNodes
 
         // 20
         [Browsable( true )]
-        [DisplayName( "Light factor" )]
+        [DisplayName( "toonLightFactor" )]
         public float Field20
         {
             get => GetDataProperty<float>();
@@ -52,7 +52,7 @@ namespace GFDStudio.GUI.DataViewNodes
 
         // 24
         [Browsable( true )]
-        [DisplayName( "Light brightness" )]
+        [DisplayName( "toonShadowBrightness" )]
         public float Field24
         {
             get => GetDataProperty<float>();
@@ -61,7 +61,7 @@ namespace GFDStudio.GUI.DataViewNodes
 
         // 28
         [Browsable( true )]
-        [DisplayName( "Shadow threshold" )]
+        [DisplayName( "toonShadowThreshold" )]
         public float Field28
         {
             get => GetDataProperty<float>();
@@ -70,7 +70,7 @@ namespace GFDStudio.GUI.DataViewNodes
 
         // 2C
         [Browsable( true )]
-        [DisplayName( "Shadow factor" )]
+        [DisplayName( "toonShadowFactor" )]
         public float Field2C
         {
             get => GetDataProperty<float>();
