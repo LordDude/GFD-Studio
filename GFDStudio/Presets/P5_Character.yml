@@ -1,7 +1,7 @@
 !Material
 ResourceType: Material
 Name: c0001_body_jyake2_low
-Flags: Bit0, Bit1, Bit5, Bit8, EnableLight2, ReceiveShadow, CastShadow, HasAttributes, HasDiffuseMap
+Flags: Bit0, Bit1, OpaqueAlpha1, Bit8, EnableLight2, ReceiveShadow, CastShadow, HasAttributes, HasDiffuseMap
 AmbientColor:
   X: 0.60000002384185791
   Y: 0.60000002384185791

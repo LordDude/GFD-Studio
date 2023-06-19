@@ -1,7 +1,7 @@
 !Material
 ResourceType: Material
 Name: kamen51_gawa
-Flags: Bit0, Bit1, Bit2, Bit5, Bit6, EnableLight2, CastShadow, HasAttributes, Bit17, HasDiffuseMap, HasSpecularMap, HasShadowMap
+Flags: Bit0, Bit1, Bit2, OpaqueAlpha1, Bit6, EnableLight2, CastShadow, HasAttributes, HasOutline, HasDiffuseMap, HasSpecularMap, HasShadowMap
 AmbientColor:
   X: 0.60000002384185791
   Y: 0.60000002384185791
