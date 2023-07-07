@@ -23,6 +23,7 @@ namespace GFDStudio.GUI.DataViewNodes
         }
 
         [Browsable(false)]
+        [DisplayName( "diffuseMap" )]
         public TextureMapViewNode DiffuseMap { get; set; }
 
         [Browsable( false )]

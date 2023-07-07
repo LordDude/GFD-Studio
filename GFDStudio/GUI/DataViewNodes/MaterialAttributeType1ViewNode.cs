@@ -18,7 +18,7 @@ namespace GFDStudio.GUI.DataViewNodes
         // 0C
         [ Browsable( true ) ]
         [ TypeConverter( typeof( Vector4TypeConverter ) ) ]
-        [DisplayName("Inner Glow")]
+        [DisplayName("edgeLightColor")]
         public Vector4 InnerGlow
         {
             get => GetDataProperty<Vector4>();
@@ -27,6 +27,7 @@ namespace GFDStudio.GUI.DataViewNodes
 
         // 1C
         [Browsable( true )]
+        [DisplayName( "edgeLightThreshold" )]
         public float Field1C
         {
             get => GetDataProperty<float>();
@@ -35,6 +36,7 @@ namespace GFDStudio.GUI.DataViewNodes
 
         // 20
         [Browsable( true )]
+        [DisplayName( "edgeLightFactor" )]
         public float Field20
         {
             get => GetDataProperty<float>();

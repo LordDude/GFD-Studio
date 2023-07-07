@@ -171,6 +171,9 @@ namespace GFDLibrary.Animations
                             }
                         }
                         break;
+                    case KeyType.Type36:
+                        key = new Single5Key( KeyType );
+                        break;
                     default:
                         throw new InvalidDataException( $"Unknown/Invalid Key frame type: {KeyType}" );
                 }
